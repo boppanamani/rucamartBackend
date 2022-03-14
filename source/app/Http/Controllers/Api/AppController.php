@@ -218,6 +218,24 @@ class AppController extends Controller
         }
     }
 
+    public function promotionbanner(Request $request)
+    {  
+        $store_id = $request->store_id;
+        $banner = DB::table('store_banner')
+                ->select('store_banner.*')
+                ->where('store_id',$store_id)
+                ->get();
+        
+         if(count($banner)>0){
+            $message = array('status'=>'1', 'message'=>'Banner List', 'data'=>$banner);
+            return $message;
+            }
+        else{
+            $message = array('status'=>'0', 'message'=>'No Banner Found');
+            return $message;
+        }
+    }
+
 
 
     public function call(Request $request)

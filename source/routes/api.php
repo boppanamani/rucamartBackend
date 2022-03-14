@@ -110,6 +110,7 @@ Route::namespace("Api")->prefix('')->group(function () {
      Route::post('recentselling', [OrderController::class,'recentselling']);
      Route::post('whatsnew', [OrderController::class,'whatsnew']);
      Route::post('store_banner', [AppController::class,'storebanner']);
+     Route::post('promo_banner', [AppController::class,'promotionbanner']);
     Route::post('storecoupons', [AppController::class,'couponlist']);
 	 Route::post('getneareststore', [CategoryController::class,'getneareststore']);
 	 Route::get('payment_success', [AppController::class,'success']);
