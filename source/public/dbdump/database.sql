@@ -3157,6 +3157,21 @@ CREATE TABLE `store_banner` (
 
 -- --------------------------------------------------------
 
+
+--
+-- Table structure for table `promo_banner`
+--
+
+CREATE TABLE `promo_banner` (
+  `banner_id` int(100) NOT NULL,
+  `banner_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `banner_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `store_id` int(11) NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'H'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `store_callback_req`
 --
@@ -4032,6 +4047,9 @@ ALTER TABLE `store_bank`
 ALTER TABLE `store_banner`
   ADD PRIMARY KEY (`banner_id`);
 
+ALTER TABLE `promo_banner`
+  ADD PRIMARY KEY (`banner_id`);
+
 --
 -- Indexes for table `store_callback_req`
 --
@@ -4607,6 +4625,9 @@ ALTER TABLE `store_bank`
 -- AUTO_INCREMENT for table `store_banner`
 --
 ALTER TABLE `store_banner`
+  MODIFY `banner_id` int(100) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `promo_banner`
   MODIFY `banner_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --

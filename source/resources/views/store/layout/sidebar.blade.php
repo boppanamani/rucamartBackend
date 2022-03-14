@@ -83,7 +83,7 @@
 					</div>
 				
                    	<div class="menu-item has-sub {{ request()->is('store/storebannerlist') ? 'active' : ''}}
-                   	{{ request()->is('store/secondary_bannerlist') ? 'active' : ''}}">
+                   	{{ request()->is('store/secondary_bannerlist') ? 'active' : ''}} {{ request()->is('store/promotionbannerlist') ? 'active' : ''}}">
 						<a href="#" class="menu-link">
 							<span class="menu-icon">
 								<i class="fa fa-image"></i>
@@ -92,7 +92,7 @@
 							<span class="menu-caret"><b class="caret"></b></span>
 						</a>
 						<div class="menu-submenu">
-						    	<div class="menu-item {{ request()->is('store/storebannerlist') ? 'active' : ''}}">
+						    <div class="menu-item {{ request()->is('store/storebannerlist') ? 'active' : ''}}">
 								<a href="{{route('storebannerlist')}}" class="menu-link">
 									<span class="menu-text">{{ __('keywords.Category Banner') }}</span>
 								</a>
@@ -101,6 +101,11 @@
 							<div class="menu-item {{ request()->is('store/secondary_bannerlist') ? 'active' : ''}}">
 								<a href="{{route('sec_bannerlist')}}" class="menu-link">
 									<span class="menu-text">{{ __('keywords.Product Banner') }}</span>
+								</a>
+							</div>
+							<div class="menu-item {{ request()->is('store/promotionbannerlist') ? 'active' : ''}}">
+								<a href="{{route('promotionbannerlist')}}" class="menu-link">
+									<span class="menu-text">{{ __('keywords.Promotion Banner') }}</span>
 								</a>
 							</div>
 						

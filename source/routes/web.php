@@ -76,6 +76,7 @@ use App\Http\Controllers\Store\StRequiredController;
 use App\Http\Controllers\Store\StSalesreportController;
 use App\Http\Controllers\Store\StoreassignHomecateController;
 use App\Http\Controllers\Store\StorebannerController;
+use App\Http\Controllers\Store\PromotionalBannerController;
 use App\Http\Controllers\Store\StorehomecateController;
 use App\Http\Controllers\Store\StoreordersController;
 use App\Http\Controllers\Store\StoreProductController;
@@ -528,6 +529,13 @@ Route::namespace("Store")->prefix('store')->group(function () {
         Route::post('storebannerupdate/{banner_id}', [StorebannerController::class,'bannerupdate'])->name('storebannerupdate');
         Route::get('storebannerdelete/{banner_id}', [StorebannerController::class,'bannerdelete'])->name('storebannerdelete');
 
+        
+        Route::get('promotionbannerlist', [PromotionalBannerController::class,'bannerlist'])->name('promotionbannerlist');
+        Route::get('promotionbanner', [PromotionalBannerController::class,'banner'])->name('promotionbanner');
+        Route::post('promotionbanneradd', [PromotionalBannerController::class,'banneradd'])->name('promotionbanneradd');
+        Route::get('promotionbanneredit/{banner_id}', [PromotionalBannerController::class,'banneredit'])->name('promotionbanneredit');
+        Route::post('promotionbannerupdate/{banner_id}', [PromotionalBannerController::class,'bannerupdate'])->name('promotionbannerupdate');
+        Route::get('promotionbannerdelete/{banner_id}', [PromotionalBannerController::class,'bannerdelete'])->name('promotionbannerdelete');
 
         Route::get('deal/list', [DealController::class,'list'])->name('deallist');
         Route::get('deal/add', [DealController::class,'AddDeal'])->name('AddDeal');

@@ -741,7 +741,7 @@ return [
 'Taxes'=>'Taxes',
 'Banners'=>'Banners',
 'Category Banner'=>'Category Banner',
-'Promation Banner'=>'Promation Banner',
+'Promotion Banner'=>'Promotion Banner',
 'Product Banner'=>'Product Banner',
 'Secondary'=>'Secondary',
 'Enabled successfully'=>'Enabled successfully',
